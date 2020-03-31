@@ -5,6 +5,12 @@ import 'bootstrap'
 import './style/app.scss'
 import axios from 'axios'
 
+
+import Chartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
+Vue.use(Chartkick.use(Chart))
+
 Vue.config.productionTip = false
 
 new Vue({

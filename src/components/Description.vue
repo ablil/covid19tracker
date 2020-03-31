@@ -8,13 +8,15 @@
         </h5>
         <div class="links-bloc mt-5">
             <div class="box bg-light shadow rounded p-2">
-                <a href="#" class="text-secondary">WHO (World Health Organization)</a>
+                <a href="https://who.int" target="_blank" class="text-secondary">WHO (World Health Organization)</a>
             </div>
             <div class="box bg-light shadow rounded p-2">
-                <a href="#" class="text-secondary">Ministry of Health</a>
+                <a href="https://www.sante.gov.ma/Pages/Accueil.aspx" target="_blank" class="text-secondary">Ministry of
+                    Health</a>
             </div>
             <div class="box bg-light shadow rounded p-2">
-                <a href="#" class="text-secondary">Covid-19 around the Globe</a>
+                <a href="https://www.who.int/redirect-pages/page/novel-coronavirus-(covid-19)-situation-dashboard"
+                    target="_blank" class="text-secondary">Covid-19 around the Globe</a>
             </div>
         </div>
     </div>

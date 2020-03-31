@@ -13,8 +13,12 @@
         </div>
         <div class="row">
             <div class="col">
-
                 <statisticBloc></statisticBloc>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <chartcontainer></chartcontainer>
             </div>
         </div>
         <div class="row">
@@ -23,6 +27,12 @@
                 <regions></regions>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <customfooter></customfooter>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -30,13 +40,22 @@
     import statisticBloc from './StatisticBloc.vue'
     import regions from './Regions.vue'
     import description from './Description.vue'
+    import chartcontainer from './ChartContainer.vue'
+    import customfooter from './Footer.vue'
 
     export default {
         name: 'index',
         components: {
             statisticBloc,
             regions,
-            description
+            description,
+            chartcontainer,
+            customfooter
+        },
+        data() {
+            return {
+                chartTitle: 'daily deaths'
+            }
         }
     }
 
