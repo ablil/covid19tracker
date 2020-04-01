@@ -1,23 +1,23 @@
 <template>
-    <div class="box-container mt-5">
-        <div class="box bg-light shadow">
+    <div class="row mt-5">
+        <div class="col-md-2 mx-auto bg-light shadow">
             <h4 class="text-info">Total Cases</h4>
             <h1 class="text-dark">{{globalStat.cases}}</h1>
         </div>
-        <div class="box bg-light shadow">
+        <div class="col-md-2 mx-auto bg-light shadow">
             <h4 class="text-danger">deaths</h4>
             <h1 class="text-dark">{{globalStat.deaths}}</h1>
         </div>
-        <div class="box bg-light shadow">
+        <div class="col-md-2 mx-auto bg-light shadow">
             <h4 class="text-success">recovered</h4>
             <h1 class="text-dark">{{globalStat.recovered}}</h1>
         </div>
-        <div class="box bg-light shadow">
+        <div class="col-md-2 mx-auto bg-light shadow">
             <h4 class="text-info">Cases</h4>
             <span class="badge badge-pill badge-warning">Today</span>
             <h1 class="text-dark">{{todayStat.cases}}</h1>
         </div>
-        <div class="box bg-light shadow">
+        <div class="col-md-2 mx-auto bg-light shadow">
             <h4 class="text-danger">Deaths</h4>
             <span class="badge badge-pill badge-warning">Today</span>
             <h1 class="text-dark">{{todayStat.deaths}}</h1>
@@ -60,18 +60,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    .box-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .box {
-        flex-grow: 0;
-        min-width: 15%;
-        min-height:100%;
-    }
-</style>

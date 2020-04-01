@@ -6,18 +6,18 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-6">
+            <div class="col-md-6">
                 <linechart :chartTitle="'Total Cases'" :chartData='{...totalCases}'></linechart>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <piechart :chartTitle="'New Cases / day'" :chartData='dailyCases'></piechart>
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-6">
+            <div class="col-md-6">
                 <linechart :colors="['#b00', '#666']" :chartTitle="'Total Deaths'" :chartData='{...totalDeaths}'></linechart>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <piechart :colors="['#b00', '#666']" :chartTitle="'New Deaths / day'" :chartData='dailyDeaths'></piechart>
 
             </div>

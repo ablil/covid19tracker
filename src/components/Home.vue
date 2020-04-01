@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container bg-light shadow rounded">
         <div class="row">
             <div class="col">
                 <h3 class="text-center">Covid-19 OverView (Morocco)</h3>
