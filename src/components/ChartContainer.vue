@@ -60,10 +60,40 @@
             reformatDate(date){
                 const splited = date.split('/')
                 return '2020-0' + splited[0] + '-' + splited[1]
+            },
+            async getCasesData() {
+                let json = await axios.get('https://api.covid19api.com/country/morocco/status/confirmed/live');
+                json = json.data;
+                for (let i = 0; i < json.length; i++){
+                    let day = json[i].Date.split('T')[0]
+                    this.totalCases[day] = parseInt(json[i].Cases)
+                    if  (i != 0){
+                        this.dailyCases.push([
+                            day,
+                            json[i].Cases - json[i-1].Cases
+                        ])
+                    }
+                }
+            },
+            async getDeathsData() {
+                let json = await axios.get('https://api.covid19api.com/country/morocco/status/deaths/live');
+                json = json.data;
+                for (let i = 0; i < json.length; i++){
+                    const day = json[i].Date.split('T')[0]
+                    this.totalDeaths[day] = parseInt(json[i].Cases)
+                    if ( i != 0 ){
+                        this.dailyDeaths.push([
+                            day,
+                            json[i].Cases - json[i-1].Cases
+                        ])
+                    }
+                }
             }
         },
         created() {
-            this.getChartsData()
+            // this.getChartsData()
+            this.getCasesData()
+            this.getDeathsData()
         }
     }
 </script>

@@ -43,7 +43,10 @@
             }
         },
         created() {
-            this.getStat()
+            // this.getStat()
+            this.getTotalDeaths()
+            this.getTotalCases()
+            this.getTotalRecovered()
         },
         methods: {
             async getStat() {
@@ -56,6 +59,20 @@
 
                 this.todayStat.deaths = countryData['total_new_deaths_today']
                 this.todayStat.cases = countryData['total_new_cases_today']
+            },
+            async getTotalDeaths() {
+                let json = await axios.get('https://api.covid19api.com/country/morocco/status/deaths/live')
+                this.globalStat.deaths = json.data[json.data.length - 1].Cases
+                this.todayStat.deaths = json.data[json.data.length - 1].Cases - json.data[json.data.length-2].Cases
+            },
+            async getTotalCases() {
+                let json = await axios.get('https://api.covid19api.com/country/morocco/status/confirmed/live')
+                this.globalStat.cases = json.data[json.data.length -1].Cases
+                this.todayStat.cases = json.data[json.data.length -1].Cases - json.data[json.data.length - 2].Cases
+            },
+            async getTotalRecovered() {
+                let json = await axios.get('https://api.covid19api.com/country/morocco/status/recovered/live')
+                this.globalStat.recovered = json.data[json.data.length -1].Cases
             }
         }
     }
