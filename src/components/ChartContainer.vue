@@ -64,7 +64,7 @@
             async getCasesData() {
                 let json = await axios.get('https://api.covid19api.com/country/morocco/status/confirmed/live');
                 json = json.data;
-                for (let i = 0; i < json.length; i++){
+                for (let i = json.length - 30; i < json.length; i++){
                     let day = json[i].Date.split('T')[0]
                     this.totalCases[day] = parseInt(json[i].Cases)
                     if  (i != 0){
@@ -78,7 +78,8 @@
             async getDeathsData() {
                 let json = await axios.get('https://api.covid19api.com/country/morocco/status/deaths/live');
                 json = json.data;
-                for (let i = 0; i < json.length; i++){
+
+                for (let i = json.length - 30; i < json.length; i++){
                     const day = json[i].Date.split('T')[0]
                     this.totalDeaths[day] = parseInt(json[i].Cases)
                     if ( i != 0 ){
