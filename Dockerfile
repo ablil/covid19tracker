@@ -1,17 +1,13 @@
-from node:lts-alpine
+FROM node:lts-alpine
 
-run npm install -g http-server
+WORKDIR /usr/src/app
 
-workdir /app
+COPY package*.json ./
 
-copy package*.json ./
+RUN npm install
 
-run npm install
+COPY . .
 
-copy . .
+EXPOSE 8080
 
-run npm run build
-
-expose 1337
-
-cmd ["http-server", "dist"]
+CMD ["npm", "run", "serve"]
