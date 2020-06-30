@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-light shadow rounded">
+    <div class="container-fluid bg-light shadow rounded p-5">
         <div class="row">
             <div class="col">
                 <h3 class="text-center">Covid-19 OverView (Morocco)</h3>
@@ -16,13 +16,13 @@
                 <statisticBloc></statisticBloc>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
+        <div class="row my-4">
+            <div class="col my-4">
                 <chartcontainer></chartcontainer>
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col my-4">
 
                 <regions></regions>
             </div>

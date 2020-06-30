@@ -1,7 +1,7 @@
 <template>
     <div class="border border-black rounded">
-        <h4 class="text-secondary">{{chartTitle}}</h4>
-        <column-chart :colors="colors" :data="chartData"></column-chart>
+        <h4 class="chart-title text-secondary">{{chartTitle}}</h4>
+        <column-chart class="chart" :colors="colors" :data="chartData"></column-chart>
     </div>
 </template>
 
@@ -16,3 +16,13 @@
         }
     }
 </script>
+
+<style lang="scss">
+    .chart-title {
+        margin: 1rem auto !important;
+        font-weight: bold;
+    }
+    .chart{
+        margin: 1rem auto !important;
+    }
+</style>

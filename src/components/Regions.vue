@@ -1,7 +1,7 @@
 <template>
     <div class="mt-5">
 
-        <h2>Stats By Regions</h2>
+        <h2 class="my-5">Stats By Regions</h2>
         <table class="table table-bordered rounded table-hover table-striped">
             <thead class="thead-dark">
                 <tr>

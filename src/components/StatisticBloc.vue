@@ -1,23 +1,23 @@
 <template>
     <div class="row mt-5">
-        <div class="col-md-2 mx-auto bg-light shadow">
+        <div class="stat-card col-md-2 mx-auto bg-light">
             <h4 class="text-info">Total Cases</h4>
             <h1 class="text-dark">{{globalStat.cases}}</h1>
         </div>
-        <div class="col-md-2 mx-auto bg-light shadow">
+        <div class="stat-card col-md-2 mx-auto bg-light ">
             <h4 class="text-danger">deaths</h4>
             <h1 class="text-dark">{{globalStat.deaths}}</h1>
         </div>
-        <div class="col-md-2 mx-auto bg-light shadow">
+        <div class="stat-card col-md-2 mx-auto bg-light ">
             <h4 class="text-success">recovered</h4>
             <h1 class="text-dark">{{globalStat.recovered}}</h1>
         </div>
-        <div class="col-md-2 mx-auto bg-light shadow">
+        <div class="stat-card col-md-2 mx-auto bg-light ">
             <h4 class="text-info">Cases</h4>
             <span class="badge badge-pill badge-warning">Today</span>
             <h1 class="text-dark">{{todayStat.cases}}</h1>
         </div>
-        <div class="col-md-2 mx-auto bg-light shadow">
+        <div class="stat-card col-md-2 mx-auto bg-light ">
             <h4 class="text-danger">Deaths</h4>
             <span class="badge badge-pill badge-warning">Today</span>
             <h1 class="text-dark">{{todayStat.deaths}}</h1>
@@ -77,3 +77,11 @@
         }
     }
 </script>
+
+<style lang="scss">
+    .stat-card {
+        padding: 2rem;
+        border: 1px solid black;
+        border-radius: 1rem;
+    }
+</style>
