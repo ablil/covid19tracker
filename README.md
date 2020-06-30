@@ -20,39 +20,37 @@ check: [http://ablil.tech:1337](http://ablil.tech:1337)
 
 ## Example of usage
 
-### In docker container
+### Running on Docker
 
 Make sure Docker is installed before precedding.
 
 ```
 # clone the repo
-git clone https://github.com/ablil/covid19tracker.git
-cd covid19tracker/
+> git clone https://github.com/ablil/covid-19-tracker covid19
+> cd covid19
 
-# create container and run
-docker build -t covid19:dev .
-docker run -d -p 1337:8080 --network host covid19:dev
+# Build Docker image and start container
+> docker build -t covid19:latest .
+docker run --name covid19 -d -p 8080:8080 covid19:latest
 ```
 
-### In localhost (Development)
+### Running in localhost (http-server)
 
 ```
-> clone the repo
-git clone https://github.com/ablil/covid19tracker.git
-cd covid19tracker/
+# clone the repo
+> git clone https://github.com/ablil/covid-19-tracker covid19
+> cd covid19
 
-> using
-npm install
-npm run build
+# Install dependencies and build
+> npm install
+> npm run build
 
-> using yarn
-yarn serve
-
-> using http-server
-npm install -g http-server
-http-server -p 1337 dist/
+# Install http-server and deploy
+> npm install -g http-server
+> http-server -p 1337 dist/
 ```
 
 ## Overview
 
-![overview](.img/overview.jpg)
+![overview1](.img/overview1.jpg)
+![overview2](.img/overview2.jpg)
