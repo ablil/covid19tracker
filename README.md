@@ -1,5 +1,6 @@
 # Covid-19 Tracker (Morocco)
 
+![Node.js CI](https://github.com/ablil/covid-19-tracker/workflows/Node.js%20CI/badge.svg)
 
 ## Introduction
 
