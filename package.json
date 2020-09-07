@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "Covid-19Tracker",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,14 +7,21 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
     "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1",
+    "vue": "^2.6.11",
+    "vue-chartkick": "^0.6.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-axios": "~0.0.4",
     "vue-template-compiler": "^2.6.11"
   }
 }
