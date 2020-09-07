@@ -1,2 +1,3 @@
 .browserslistrc
 node_modules/
+dist/

@@ -1,6 +1,6 @@
 # Covid-19 Tracker (Morocco)
 
-![Node.js CI](https://github.com/ablil/covid-19-tracker/workflows/Node.js%20CI/badge.svg)
+![CI](https://github.com/ablil/covid-19-tracker/workflows/CI/badge.svg?branch=develop)
 
 ## Introduction
 
@@ -19,39 +19,16 @@ check: [http://ablil.tech:1337](http://ablil.tech:1337)
 * chart.js (2.9.3): generating graphs
 
 
-## Example of usage
+### Build & Run
 
-### Running on Docker
-
-Make sure Docker is installed before precedding.
+make sure `http-sever` is installed with `npm i -g http-server`
 
 ```
 # clone the repo
 > git clone https://github.com/ablil/covid-19-tracker covid19
 > cd covid19
 
-# Build Docker image and start container
-> docker build -t covid19:latest .
-docker run --name covid19 -d -p 8080:8080 covid19:latest
-```
-
-### Running in localhost (http-server)
-
-```
-# clone the repo
-> git clone https://github.com/ablil/covid-19-tracker covid19
-> cd covid19
-
-# Install dependencies and build
-> npm install
+> npm i
 > npm run build
-
-# Install http-server and deploy
-> npm install -g http-server
-> http-server -p 1337 dist/
+> cd dist && http-server
 ```
-
-## Overview
-
-![overview1](.img/overview1.jpg)
-![overview2](.img/overview2.jpg)
