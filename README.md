@@ -1,6 +1,7 @@
 # Covid-19 Tracker (Morocco)
 
-![CI](https://github.com/ablil/covid-19-tracker/workflows/CI/badge.svg?branch=develop)
+![CI:master](https://github.com/ablil/covid-19-tracker/workflows/CI/badge.svg?branch=master)
+![CI:develop](https://github.com/ablil/covid-19-tracker/workflows/CI/badge.svg?branch=develop)
 
 ## Introduction
 
