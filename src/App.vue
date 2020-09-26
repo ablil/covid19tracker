@@ -230,7 +230,7 @@ main.content {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    // TODO: flex wrap
+    flex-wrap: wrap;
 
     text-align: center;
 
@@ -264,5 +264,25 @@ main.content {
 
 footer {
   margin-bottom: 2rem;
+}
+
+@media screen and ( max-width: 700px ) {
+  main.content {
+    width: 100%;
+  }
+
+  section.status, .right, .left {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .center {
+    margin: 2rem auto;
+  }
+
+  footer {
+    margin-top: 2rem;
+  }
 }
 </style>
