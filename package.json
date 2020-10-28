@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "npm run build"
+    "start": "npm run build && npx http-server dist/"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
+    "http-server": "^0.12.3",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-axios": "~0.0.4",
