@@ -18,4 +18,9 @@ jobs:
       - name: build and deploy
         env:
           HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+          PORT: ${{secrets.HEROKU_APP_PORT}}
         run: heroku container:push -a ${{secrets.HEROKU_APP_NAME}} web
+      - name: release
+        env:
+          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+        run: heroku container:release -a ${{secrets.HEROKU_APP_NAME}} web
